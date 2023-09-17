@@ -113,7 +113,7 @@
                       <v-col cols="3"> <v-btn variant="tonal" block rounded="0" @click="editMatrixPlaceholder(m.name)">Edit</v-btn> </v-col>
                       <v-col cols="3"> <v-btn variant="tonal" color="warning" block rounded="0"
                         @click="cloneMatrix(m.name)">Clone</v-btn> </v-col>
-                      <v-col cols="6"> <v-btn  color="#913631" block rounded="0">Delete</v-btn> </v-col>
+                      <v-col cols="6"> <v-btn  color="#913631" block rounded="0" @click="matrixStore.removeMatrix(m.name)">Delete</v-btn> </v-col>
                     </v-row>
 
                   </v-container>

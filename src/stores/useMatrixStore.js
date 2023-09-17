@@ -50,7 +50,13 @@ export default defineStore('matrix', () => {
     }
 
     function getSaved(name){
-        return saved.find(sm => sm.name === name);
+        return saved.find(sm => sm.name === name).matrix;
+    }
+
+    function removeMatrix(name){
+        const index = saved.findIndex(sm => sm.name === name);
+        if(index === -1) return;
+        saved.splice(index, 1);
     }
 
     return {
@@ -65,6 +71,7 @@ export default defineStore('matrix', () => {
         isEditing,
         
         setPlaceholderOnName,
-        getSaved
+        getSaved,
+        removeMatrix
     }
 })
